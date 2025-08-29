@@ -4,14 +4,12 @@ use anchor_spl::{
     token::{self, Mint, Token, TokenAccount, Transfer},
 };
 
-// Update this to your program ID after deployment
-declare_id!("48rFKbMveexvehWYbyzTv2qCecomzL9aY9tVwALnyARn");
+declare_id!("DjZLtdJ4Ccz49koPEAuDWAsenAoXjws2nosxHRzBADUJ");
 
 #[program]
 pub mod sol_token_vault {
     use super::*;
 
-    /// Initialize a new vault for a merchant and token mint
     /// Creates the vault PDA and its associated token account
     pub fn initialize_vault(ctx: Context<InitializeVault>) -> Result<()> {
         let vault = &mut ctx.accounts.vault;
